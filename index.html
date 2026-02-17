@@ -19,6 +19,8 @@
       <!-- Style sheets -->
       <link href="css/reset.css" rel="stylesheet">
       <link href="css/main.css" rel="stylesheet">
+
+      <script defer src="https://yummy.nebez.dev/script.js" data-website-id="9ceaba15-371f-4407-a59a-f57a7214af41"></script>
    </head>
    <body>
       <div id="gamecontainer">
@@ -58,21 +60,5 @@
       <script src="js/jquery.transit.min.js"></script>
       <script src="js/buzz.min.js"></script>
       <script src="js/main.js"></script>
-
-      <script>
-      function inIframe() {
-          try {
-              return window.self !== window.top;
-          } catch (e) {
-              return true;
-          }
-      }
-      if (!inIframe() && window.location.hostname == 'nebezb.com') {
-         window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-         ga('create', 'UA-48047334-1', 'auto');
-         ga('send', 'pageview');
-      }
-      </script>
-      <script async src='https://www.google-analytics.com/analytics.js'></script>
    </body>
 </html>
