@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+  build:
+    commands:
+      - echo "Build started on `date`"
+      - echo "Preparing static files for deployment..."
+  post_build:
+    commands:
+      - echo "Build completed on `date`"
+      # Jika Anda ingin mendeploy langsung ke S3 dari CodeBuild, uncomment baris di bawah ini
+      # dan ganti <NAMA_BUCKET_S3_ANDA> dengan nama bucket S3 yang sebenarnya.
+      # - aws s3 sync . s3://<NAMA_BUCKET_S3_ANDA> --exclude "*" --include "index.html" --include "js/*" --include "css/*" --include "assets/*" --delete
+
+artifacts:
+  files:
+    - index.html
+    - js/**/*
+    - css/**/*
+    - assets/**/*
