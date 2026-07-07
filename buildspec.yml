@@ -11,9 +11,8 @@ phases:
   post_build:
     commands:
       - echo "Build completed on `date`"
-      # Jika Anda ingin mendeploy langsung ke S3 dari CodeBuild, uncomment baris di bawah ini
-      # dan ganti <NAMA_BUCKET_S3_ANDA> dengan nama bucket S3 yang sebenarnya.
-      # - aws s3 sync . s3://<NAMA_BUCKET_S3_ANDA> --exclude "*" --include "index.html" --include "js/*" --include "css/*" --include "assets/*" --delete
+      # Artifacts akan dikemas oleh CodeBuild dan dapat di-deploy
+      # ke layanan AWS lainnya (misalnya via CodePipeline atau Amplify).
 
 artifacts:
   files:
